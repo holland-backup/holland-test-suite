@@ -14,3 +14,29 @@ approach here is to do the following:
 Configuration
 =============
 Tests are parameterized via nose-testconfig.  
+
+Running
+=======
+
+To run the tests you should first run scripts/mkvirtualenv.py in the main holland repo
+
+Install nose-testconfig
+
+# pip install --upgrade nose-testconfig
+
+Make sure you're using the current nosetests from the virtualenv:
+
+# set +h
+
+(or # rehash in zsh)
+
+Run the test suite:
+
+# nosetests --tc-file=config.ini
+
+This will unpack the mysql versions specified in the config.ini and run the tests
+in test.py
+
+Each test in test.py just run holland backup (with or without --dry-run) against a 
+config in holland.conf.d/
+
