@@ -1,0 +1,16 @@
+Intro
+=====
+
+This package intends to provide integration tests for holland.  The basic
+approach here is to do the following:
+
+* Provide a set of MySQL binary distribution tarballs for each MySQL version to
+  test 
+* Setup a sandbox directory under ${sandbox_root}
+* Run holland commands against this MySQL version by setting MYSQL_HOME to point
+  to the correct MySQL installation and holland's [mysql:client] will pick that
+  up via defaults-extra-files = .my.cnf
+
+Configuration
+=============
+Tests are parameterized via nose-testconfig.  

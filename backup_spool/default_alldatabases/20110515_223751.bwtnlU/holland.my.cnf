@@ -1,0 +1,5 @@
+[client]
+password = ""
+user = "root"
+socket = "/home/abg/projects/holland-test-suite/sandboxes/mysql_5.0/data/sandbox.sock"
+[mysqldump]

@@ -1,0 +1,2 @@
+mysql mysql.sql.gz
+test test.sql.gz
